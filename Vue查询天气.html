@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="x-UA-Compatible" content="ie=edge">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/查询天气.css"/>
+</head>
+	<html>
+	<body>
+		
+		<div class="wrap" id="app">
+			<h1>天气查询</h1>
+			<!--加载显示栏-->
+			<div class="searh_form">
+				<!--搜索栏-->
+				<div class="formg_roup">
+					<input type="text" v-model='city' @keyup.enter='searchWeather'  class="input_txt" placeholder="请输入查询的城市"/><button class="input_sub" @click='searchWeather'>
+						搜索
+					</button>
+				</div>
+				<!--热键城市hotkey-->
+				<div class="hotkey">
+					<a href="javascript:;" @click="changeCity('厦门')">厦门</a>
+					<a href="javascript:;" @click="changeCity('漳州')">漳州</a>
+					<a href="javascript:;" @click="changeCity('东莞')">东莞</a>
+				</div>
+			</div>
+			<!--天气列表weather-->
+			<ul class="weather">
+				<li v-for='item in weather'>
+					<div class="info-type"><span class="iconfont">{{item.type}}</span></div>
+					<div class="info_temp">
+						<b>{{item.low}}</b>
+						~
+						<b>{{ item.high }}</b>						
+					</div>
+					<div class="info_date"><span>{{ item.date }}</span></div>
+				</li>
+			</ul>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="js/查询天气.js"></script>
+	</body>
+	
+</html>

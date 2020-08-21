@@ -1,0 +1,60 @@
+#app {
+	width: 900px;
+	height: 500px;
+	position:absolute; 
+	top:50%;
+	left: 50%;
+	margin: -250px 0 0 -450px ;
+}
+#app h1 {
+	text-align: center;
+	color: pink;
+}
+.searh_form {
+	width: 700px;
+	margin: 0 auto;	
+}
+
+.input_txt {
+	padding: 0;
+	height: 30px;
+	width: 500px;
+	border: 1px solid skyblue;
+}
+.input_sub {	
+	height: 32px;
+	width: 75px;
+	border: 1px solid skyblue;
+	background-color: skyblue;
+	border-left: none;
+}
+.hotkey a {
+	text-decoration:none;
+	margin: 10px;
+	
+}
+li {
+	display:inline-block;
+	border-left: 1px solid #ccc;
+}
+.info-type {
+	font-size: 22px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.info_temp,
+.info_date span {
+	font-size: 14px;
+}
+.info-type,
+.info_temp {
+	color: orange;
+}
+.info_date  {
+	color: gray;
+	text-align: center;
+	margin-top: 10px;
+}
+.info_temp {
+	margin:0 8px ;
+}
